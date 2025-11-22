@@ -528,8 +528,8 @@ def example_usage():
     # Initialize bot
     # 📝 UPDATE THE CHANNEL NAME:
     bot = JobPostingBot(
-        slack_token=slack_token,
-        channel_name='job-alerts',  # ← UPDATE: Your channel name (without #)
+        slack_token=xoxb-9951129876435-9961280660292-eVpGtBd37b6Mj7tMnppy45Oz,
+        channel_name='job-notifications',  # ← UPDATE: Your channel name (without #)
         linkedin_cookie=linkedin_cookie  # Optional: for network posts
     )
 
