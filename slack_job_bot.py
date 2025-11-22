@@ -528,14 +528,14 @@ def example_usage():
     # Initialize bot
     # 📝 UPDATE THE CHANNEL NAME:
     bot = JobPostingBot(
-        slack_token=xoxb-9951129876435-9961280660292-eVpGtBd37b6Mj7tMnppy45Oz,
+        slack_token=os.getenv('SLACK_BOT_TOKEN'),
         channel_name='job-notifications',  # ← UPDATE: Your channel name (without #)
-        linkedin_cookie=linkedin_cookie  # Optional: for network posts
+        linkedin_cookie=os.getenv('LINKEDIN_COOKIE')  # Optional: for network posts
     )
 
     # Option 1: Run once (testing)
-    print("Running bot once...")
-    bot.run_once()
+    print("Running bot on schedule...")
+bot.run_scheduled(interval_hours=0.5)  # Check every 30 minutes
 
     # Option 2: Run on schedule (production)
     # Uncomment the lines below to run continuously:
